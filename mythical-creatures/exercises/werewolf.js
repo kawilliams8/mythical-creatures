@@ -1,5 +1,5 @@
 class Werewolf {
-	constructor (name, location) {
+	constructor (name, location, victim) {
 		this.name = name;
 		this.location = location;
 		this.human = true;
@@ -7,33 +7,24 @@ class Werewolf {
 		this.hungry = false;
 	}
 
-	change () {
+	change() {
 		this.human = !this.human;
 		this.wolf = !this.wolf;
 		this.hungry = !this.hungry;
 	}
 
-	eat (victim) {
-		if (this.hungry && this.wolf) {
-			victim.alive = false;
-			this.change();
-		}
-		if (this.hungry && this.human) {
+	eat(victim) {
+		if (this.human === true) {
 			victim.alive = true;
-			this.hungry = true;
+		}
+		if (this.human === false) {
+			victim.alive = false;
 		}
 		}
 
-	//eat(victim) {
-		// if (this.hungry) {
-		// 	victim.alive = false;
-		// 	this.change();
-		// } else {
-		// 	return;
-		// }
 
+	
 
-	}
 }
 
 module.exports = Werewolf;

@@ -65,6 +65,6 @@ describe('Wizard', function() {
     // assert isRested is false
     assert.equal(wizard.isRested, false);
     // assert cast() returns 'I SHALL NOT CAST!'
-   
+    assert.equal(wizard.cast(), 'I SHALL NOT CAST!');
   });
 });

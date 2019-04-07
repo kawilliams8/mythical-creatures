@@ -12,10 +12,11 @@ class Wizard {
 
 	cast() {
 		this.castCounter++;
-		{(this.castCounter <3) ? this.isRested = true : this.isRested = false;
-		return "MAGIC BULLET"
+		if (this.castCounter >= 3) {
+			this.isRested = false;
+			return 'I SHALL NOT CAST!';
 		}
-	return "I SHALL NOT CAST!";
+		return "MAGIC BULLET";
 	}
 };
 

@@ -1,5 +1,5 @@
 class Victim {
-	constructor (name) {
+	constructor(name, alive) {
 		this.name = name;
 		this.alive = true;
 	}

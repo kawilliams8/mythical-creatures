@@ -141,7 +141,6 @@ describe('Centaur', function() {
     var centaur = new Centaur('George');
 
     assert.equal(centaur.cranky, false);
-    console.log(centaur);
     centaur.drinkPotion();
 
     assert.equal(centaur.cranky, true);

@@ -5,7 +5,6 @@ class Centaur {
 		this.cranky = false;
 		this.standing = true;
 		this.layingDown = false;
-		this.sleep
 		this.runShootCounter = 0;
 
 	}
@@ -56,16 +55,12 @@ class Centaur {
 	}
 
 	drinkPotion() {
-		console.log(this);
 		if (this.layingDown) {
 			return 'Not while I\'m laying down!';
 		} else {
 			this.cranky = !this.cranky;
 		}
-
-		}
-
-
+	}
 }	
 
 module.exports = Centaur;
